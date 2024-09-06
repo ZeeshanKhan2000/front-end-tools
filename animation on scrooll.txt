@@ -1,3 +1,42 @@
 https://codepen.io/noproblemnigel/pen/PajKNa
 
 fade in on scrooll ////////
+
+html
+
+just put class ///
+
+fadein   "this is class for animation"
+
+csss of animation ////
+
+.fadein {
+  opacity: 0;
+  transition: all 1.5s;
+  transform: translate(0, 100px);
+}
+
+.fadein.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+javascript of animation /////
+
+// fade in grid items  ==================================
+
+  $(document).on("scroll", function () {
+    var pageTop = $(document).scrollTop()
+    var pageBottom = pageTop + $(window).height()
+    var tags = $(".fadein")
+
+    for (var i = 0; i < tags.length; i++) {
+      var tag = tags[i]
+
+      if ($(tag).offset().top < pageBottom) {
+        $(tag).addClass("visible")
+      } else {
+        $(tag).removeClass("visible")
+      }
+    }
+  })
