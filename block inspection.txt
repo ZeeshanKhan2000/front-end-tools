@@ -1,0 +1,7 @@
+
+to close the inspect option in brouser /////////////
+
+<body class="bg-gray-900" oncontextmenu="return false" oncopy="return false" oncut="return false"
+onpaste="return false">
+
+</body>
